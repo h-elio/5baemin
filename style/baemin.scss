@@ -4,15 +4,20 @@ body {
     background-color: rgb(42, 193, 188);
 }
 .header {
+    .inner {
+        display: flex;
+        justify-content: space-between;
+        padding-right: 173px;
+    }
     transition: 0.5s;
-    padding: 60px 173px 0 0;
-    display: flex;
+    padding-top: 60px;
+
     position: fixed;
     top: 0;
     left: 50%;
     transform: translateX(-50%);
     z-index: 100;
-    justify-content: space-between;
+
     width: 1024px;
     .header-logo {
         width: 28%;
@@ -61,7 +66,7 @@ body {
     position: absolute;
     right: 200px;
     top: 50%;
-    transform: translateY(-50%);
+    // transform: translateY(-50%);
     z-index: 879896;
     li {
         margin: 10px;
@@ -81,6 +86,7 @@ body {
 }
 .inner {
     width: 1024px !important;
+    padding: 0 50px;
     box-sizing: border-box !important;
     margin: 0 auto;
 }
@@ -99,9 +105,11 @@ body {
 
     .ani-img-area {
         position: absolute;
-        width: 700px;
-        top: 5px;
-        right: 200px;
+        width: 635px;
+        // top: 0;
+        bottom: 0;
+        top: 79px;
+        right: 250px;
         opacity: 1;
         transition: all 1s;
         &.to-top {
@@ -188,7 +196,8 @@ body {
 }
 .section6 {
     .ani-img-area {
-        top: -150px;
+        top: -60px;
+        right: 300px;
         img {
         }
     }

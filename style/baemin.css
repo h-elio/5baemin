@@ -40,15 +40,18 @@ body {
 
 .header {
   transition: 0.5s;
-  padding: 60px 173px 0 0;
-  display: flex;
+  padding-top: 60px;
   position: fixed;
   top: 0;
   left: 50%;
   transform: translateX(-50%);
   z-index: 100;
-  justify-content: space-between;
   width: 1024px;
+}
+.header .inner {
+  display: flex;
+  justify-content: space-between;
+  padding-right: 173px;
 }
 .header .header-logo {
   width: 28%;
@@ -99,7 +102,6 @@ body {
   position: absolute;
   right: 200px;
   top: 50%;
-  transform: translateY(-50%);
   z-index: 879896;
 }
 #menu li {
@@ -117,6 +119,7 @@ body {
 
 .inner {
   width: 1024px !important;
+  padding: 0 50px;
   box-sizing: border-box !important;
   margin: 0 auto;
 }
@@ -135,9 +138,10 @@ body {
 }
 .section .ani-img-area {
   position: absolute;
-  width: 700px;
-  top: 5px;
-  right: 200px;
+  width: 635px;
+  bottom: 0;
+  top: 79px;
+  right: 250px;
   opacity: 1;
   transition: all 1s;
 }
@@ -231,7 +235,8 @@ body {
 }
 
 .section6 .ani-img-area {
-  top: -150px;
+  top: -60px;
+  right: 300px;
 }
 .section8 {
   padding: 100px max((100vw - 1024px) / 2, 50px) 0;
