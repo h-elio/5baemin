@@ -1,0 +1,250 @@
+@use "_core.scss";
+
+body {
+    background-color: rgb(42, 193, 188);
+}
+.header {
+    transition: 0.5s;
+    padding: 60px 173px 0 0;
+    display: flex;
+    position: fixed;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 100;
+    justify-content: space-between;
+    width: 1024px;
+    .header-logo {
+        width: 28%;
+        max-width: 142px;
+    }
+    .header-sns-list {
+        .app-download {
+            width: 140px;
+            height: 48px;
+            background-image: url(../baemin-img/btn-download-white@3x.png);
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-color: transparent;
+            outline: none;
+            border: none;
+            cursor: pointer;
+        }
+        display: flex;
+        align-items: center;
+        li {
+            margin-left: 20px;
+            img {
+                width: 34px;
+            }
+        }
+    }
+}
+.riders {
+    transition: 0.5s;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 173px;
+    height: 226px;
+    z-index: 19;
+}
+.scroll-img {
+    width: 68px;
+    position: fixed;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 999;
+}
+#menu {
+    position: absolute;
+    right: 200px;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 879896;
+    li {
+        margin: 10px;
+        &.active a {
+            background: url(https://www.baemin.com/_next/static/images/dotSelect@2x.png)
+                0% 0% / 100% 100% no-repeat;
+        }
+
+        a {
+            display: block;
+            width: 24px;
+            height: 24px;
+            background: url(https://www.baemin.com/_next/static/images/dotScroll02@2x.png)
+                0% 0% / 100% 100% no-repeat;
+        }
+    }
+}
+.inner {
+    width: 1024px !important;
+    box-sizing: border-box !important;
+    margin: 0 auto;
+}
+
+.section {
+    padding: 165px 50px 0px;
+    justify-content: flex-start !important;
+    position: relative;
+    .txt-img {
+        width: 50%;
+        max-width: 462px;
+    }
+    .txt-area p {
+        color: #fff;
+    }
+
+    .ani-img-area {
+        position: absolute;
+        width: 700px;
+        top: 5px;
+        right: 200px;
+        opacity: 1;
+        transition: all 1s;
+        &.to-top {
+            top: 700px;
+            opacity: 0;
+        }
+        &.to-left {
+            right: -700px;
+            opacity: 0;
+        }
+        .bike {
+            transition: all 1s;
+            position: absolute;
+            top: 0;
+            right: 0;
+        }
+        &.to-ride .bike {
+            top: -50px;
+            right: 50px;
+        }
+    }
+}
+.section1 {
+    background-image: url(../baemin-img/main_02@2x.jpg);
+    background-position: center;
+    background-size: cover;
+    &.on {
+        animation: 1s linear 0s 1 normal forwards running zoom-in;
+        @keyframes zoom-in {
+            from {
+                background-size: 150%;
+            }
+            to {
+                background-size: 100%;
+            }
+        }
+    }
+    .download-area {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 40px;
+        p {
+            color: #fff;
+            margin-bottom: 14px;
+        }
+        .appstore {
+            display: flex;
+            flex-direction: column;
+            .download-links {
+                display: flex;
+                button {
+                    background-repeat: no-repeat;
+                    background-size: 140px;
+                    background-position: center center;
+                    background-color: rgb(255, 255, 255);
+                    outline: none;
+                    border: none;
+                    cursor: pointer;
+                    width: 200px;
+                    height: 70px;
+                    margin-right: 12px;
+                    padding: 15px 30px;
+                    border-radius: 100px;
+                    &.apple {
+                        background-image: url(../baemin-img/img-appstore-default@2x.png);
+                    }
+                    &.google {
+                        background-image: url(../baemin-img/img-googleplay-default@2x.png);
+                    }
+                }
+            }
+        }
+        .qrcode {
+            width: 143px;
+        }
+    }
+}
+
+.section4 {
+    .b2b-btn {
+        margin-top: 25px;
+        width: 233px;
+    }
+}
+.section6 {
+    .ani-img-area {
+        top: -150px;
+        img {
+        }
+    }
+}
+.section8 {
+    padding: 100px max((100vw - 1024px) / 2, 50px) 0;
+    display: flex;
+    flex-direction: row !important;
+    background-color: #fff;
+    .bottom-left {
+        width: 50%;
+        .site-link {
+            display: flex;
+            width: 300px;
+            flex-wrap: wrap;
+            li > a {
+                display: block;
+                width: 140px;
+                padding-bottom: 10px;
+            }
+            img {
+                width: auto;
+                height: 24px;
+            }
+        }
+        .bottom-sns-list {
+            display: flex;
+            margin-top: 50px;
+            li > a {
+                display: block;
+                width: 40px;
+                margin-right: 38px;
+            }
+        }
+        .infomation {
+            font-size: 14px;
+            color: #333;
+            position: absolute;
+            bottom: 90px;
+            li {
+                margin-top: 25px;
+                a {
+                    text-decoration: underline;
+                }
+            }
+        }
+    }
+    .bottom-right {
+        width: 50%;
+        .txt-img {
+            width: 193px;
+        }
+        a {
+            display: block;
+            width: 145px;
+            margin-top: 35px;
+        }
+    }
+}

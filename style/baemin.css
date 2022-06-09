@@ -1,0 +1,290 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700&display=swap");
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  color: #000;
+  font-family: "Noto Sans KR", sans-serif;
+}
+
+html,
+body,
+#root {
+  margin: 0;
+  padding: 0;
+  min-height: 100vh !important;
+}
+
+li,
+ul,
+ol {
+  list-style: none;
+}
+
+a {
+  color: #000;
+  text-decoration: none;
+}
+
+img {
+  width: 100%;
+}
+
+.txt-bold {
+  font-weight: 700;
+}
+
+body {
+  background-color: rgb(42, 193, 188);
+}
+
+.header {
+  transition: 0.5s;
+  padding: 60px 173px 0 0;
+  display: flex;
+  position: fixed;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 100;
+  justify-content: space-between;
+  width: 1024px;
+}
+.header .header-logo {
+  width: 28%;
+  max-width: 142px;
+}
+.header .header-sns-list {
+  display: flex;
+  align-items: center;
+}
+.header .header-sns-list .app-download {
+  width: 140px;
+  height: 48px;
+  background-image: url(../baemin-img/btn-download-white@3x.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: transparent;
+  outline: none;
+  border: none;
+  cursor: pointer;
+}
+.header .header-sns-list li {
+  margin-left: 20px;
+}
+.header .header-sns-list li img {
+  width: 34px;
+}
+
+.riders {
+  transition: 0.5s;
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 173px;
+  height: 226px;
+  z-index: 19;
+}
+
+.scroll-img {
+  width: 68px;
+  position: fixed;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 999;
+}
+
+#menu {
+  position: absolute;
+  right: 200px;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 879896;
+}
+#menu li {
+  margin: 10px;
+}
+#menu li.active a {
+  background: url(https://www.baemin.com/_next/static/images/dotSelect@2x.png) 0% 0%/100% 100% no-repeat;
+}
+#menu li a {
+  display: block;
+  width: 24px;
+  height: 24px;
+  background: url(https://www.baemin.com/_next/static/images/dotScroll02@2x.png) 0% 0%/100% 100% no-repeat;
+}
+
+.inner {
+  width: 1024px !important;
+  box-sizing: border-box !important;
+  margin: 0 auto;
+}
+
+.section {
+  padding: 165px 50px 0px;
+  justify-content: flex-start !important;
+  position: relative;
+}
+.section .txt-img {
+  width: 50%;
+  max-width: 462px;
+}
+.section .txt-area p {
+  color: #fff;
+}
+.section .ani-img-area {
+  position: absolute;
+  width: 700px;
+  top: 5px;
+  right: 200px;
+  opacity: 1;
+  transition: all 1s;
+}
+.section .ani-img-area.to-top {
+  top: 700px;
+  opacity: 0;
+}
+.section .ani-img-area.to-left {
+  right: -700px;
+  opacity: 0;
+}
+.section .ani-img-area .bike {
+  transition: all 1s;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+.section .ani-img-area.to-ride .bike {
+  top: -50px;
+  right: 50px;
+}
+
+.section1 {
+  background-image: url(../baemin-img/main_02@2x.jpg);
+  background-position: center;
+  background-size: cover;
+}
+.section1.on {
+  -webkit-animation: 1s linear 0s 1 normal forwards running zoom-in;
+          animation: 1s linear 0s 1 normal forwards running zoom-in;
+}
+@-webkit-keyframes zoom-in {
+  from {
+    background-size: 150%;
+  }
+  to {
+    background-size: 100%;
+  }
+}
+@keyframes zoom-in {
+  from {
+    background-size: 150%;
+  }
+  to {
+    background-size: 100%;
+  }
+}
+.section1 .download-area {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 40px;
+}
+.section1 .download-area p {
+  color: #fff;
+  margin-bottom: 14px;
+}
+.section1 .download-area .appstore {
+  display: flex;
+  flex-direction: column;
+}
+.section1 .download-area .appstore .download-links {
+  display: flex;
+}
+.section1 .download-area .appstore .download-links button {
+  background-repeat: no-repeat;
+  background-size: 140px;
+  background-position: center center;
+  background-color: rgb(255, 255, 255);
+  outline: none;
+  border: none;
+  cursor: pointer;
+  width: 200px;
+  height: 70px;
+  margin-right: 12px;
+  padding: 15px 30px;
+  border-radius: 100px;
+}
+.section1 .download-area .appstore .download-links button.apple {
+  background-image: url(../baemin-img/img-appstore-default@2x.png);
+}
+.section1 .download-area .appstore .download-links button.google {
+  background-image: url(../baemin-img/img-googleplay-default@2x.png);
+}
+.section1 .download-area .qrcode {
+  width: 143px;
+}
+
+.section4 .b2b-btn {
+  margin-top: 25px;
+  width: 233px;
+}
+
+.section6 .ani-img-area {
+  top: -150px;
+}
+.section8 {
+  padding: 100px max((100vw - 1024px) / 2, 50px) 0;
+  display: flex;
+  flex-direction: row !important;
+  background-color: #fff;
+}
+.section8 .bottom-left {
+  width: 50%;
+}
+.section8 .bottom-left .site-link {
+  display: flex;
+  width: 300px;
+  flex-wrap: wrap;
+}
+.section8 .bottom-left .site-link li > a {
+  display: block;
+  width: 140px;
+  padding-bottom: 10px;
+}
+.section8 .bottom-left .site-link img {
+  width: auto;
+  height: 24px;
+}
+.section8 .bottom-left .bottom-sns-list {
+  display: flex;
+  margin-top: 50px;
+}
+.section8 .bottom-left .bottom-sns-list li > a {
+  display: block;
+  width: 40px;
+  margin-right: 38px;
+}
+.section8 .bottom-left .infomation {
+  font-size: 14px;
+  color: #333;
+  position: absolute;
+  bottom: 90px;
+}
+.section8 .bottom-left .infomation li {
+  margin-top: 25px;
+}
+.section8 .bottom-left .infomation li a {
+  text-decoration: underline;
+}
+.section8 .bottom-right {
+  width: 50%;
+}
+.section8 .bottom-right .txt-img {
+  width: 193px;
+}
+.section8 .bottom-right a {
+  display: block;
+  width: 145px;
+  margin-top: 35px;
+}/*# sourceMappingURL=baemin.css.map */
